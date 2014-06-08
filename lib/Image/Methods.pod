@@ -1,0 +1,35 @@
+=encoding utf-8
+
+=head1 NAME
+
+Image::Methods - Some general functions for image maps
+
+=head1 SYNOPSIS
+
+    use Image::Methods qw/binarization grayscale grayscale_means grayscale_basic/;
+    use Image::PNM qw/load_pnm/;
+
+    my $bitmap = load_pnm('image.ppm')  # color maps
+    my $gray = grayscale($gray);    # grayscale($gray, 255)
+    # or grayscale($img->bitmap, $img->bmax) if you use from Image::PNM instance
+    # grayscale_basic is same as grayscale
+
+    my $binarymap = binarization($gray);
+
+
+=head1 DESCRIPTION
+
+Image::Methods is my adversaria
+
+=head1 LICENSE
+
+Copyright (C) Aiga Suzuki.
+
+This library is released under MIT licence.
+
+=head1 AUTHOR
+
+Aiga Suzuki 
+
+=cut
+

@@ -1,0 +1,7 @@
+name = "Image-Methods"
+# badges = ["travis"]
+module_maker="ModuleBuildTiny"
+readme_from = "lib/Image/Methods.pod"
+abstract_from = "lib/Image/Methods.pod"
+authors_from = "lib/Image/Methods.pod"
+license = "mit"
