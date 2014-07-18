@@ -1,5 +1,9 @@
 Revision history for Perl extension Image-Methods
 
+0.0.2
+    - grayscale_ow, which is convert grayscale under specified pixel color weight added.
+
+
 0.0.1
     - original version
     - grayscale convert in 2 ways and binarization method is implemented

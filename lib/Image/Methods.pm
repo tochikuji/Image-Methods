@@ -5,8 +5,8 @@ use strict;
 use warnings;
 use base 'Exporter';
 
-our @EXPORT_OK = qw/grayscale grayscale_means grayscale_basic binarization/;
-our $VERSION = "0.01";
+our @EXPORT_OK = qw/grayscale grayscale_means glayscale_ow grayscale_basic binarization/;
+our $VERSION = "0.02";
 
 sub new{
     my $package = shift;
@@ -53,6 +53,30 @@ sub grayscale_basic{
     
     return $gmap;
 }
+
+
+sub grayscale_ow{
+    my $bitmap = shift;
+    my ($r, $g, $b, $bmax) = @_;
+
+    $bmax //= 255;
+
+    # normalize
+    my $sum = $r + $g + $b;
+    $r /= $sum; $g /= $sum; $b /= $sum;
+
+    my $gmap = [];
+    my ($width, $height) = ($#{$bitmap->[0]}, $#$bitmap);
+
+    for my $y (0 .. $height){
+        for my $x (0 .. $width){
+            $gmap->[$y]->[$x] = int(($bitmap->[$y]->[$x]->[0] * $r + $bitmap->[$y]->[$x]->[1] * $g + $bitmap->[$y]->[$x]->[2] * $b) * 255 / $bmax);
+        }
+    }
+    
+    return $gmap;
+}
+
 
 
 sub grayscale{
