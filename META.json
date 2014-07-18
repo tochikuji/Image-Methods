@@ -54,5 +54,19 @@
       }
    },
    "release_status" : "unstable",
-   "version" : "0.01"
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/tochikuji/Image-Methods/issues"
+      },
+      "homepage" : "https://github.com/tochikuji/Image-Methods",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/tochikuji/Image-Methods.git",
+         "web" : "https://github.com/tochikuji/Image-Methods"
+      }
+   },
+   "version" : "0.02",
+   "x_contributors" : [
+      "Aiga Suzuki <tochikuji@gmail.com>"
+   ]
 }

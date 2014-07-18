@@ -5,7 +5,7 @@ use strict;
 use warnings;
 use base 'Exporter';
 
-our @EXPORT_OK = qw/grayscale grayscale_means glayscale_ow grayscale_basic binarization/;
+our @EXPORT_OK = qw/grayscale grayscale_means grayscale_ow grayscale_basic binarization/;
 our $VERSION = "0.02";
 
 sub new{
